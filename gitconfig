@@ -1,10 +1,7 @@
 [user]
-    name = Ian Mikhailov
-    email = ian.mikhailov+github@heathmont.net
-    # signingkey = 91E154D323F48E5355DEB7EE6504091C705F0DDB # ???
-    # signingkey = E3F0C2BD0B792E2A4BACE7D2AFC71A447AC3E381 # ian.mikhailov@gmail.com
-    # signingkey = 6E015B6E08E662A5A07A72BB27AE38570775E1B1 # ian.mikhailov+gpg@gmail.com
-    signingkey = E3F0C2BD0B792E2A4BACE7D2AFC71A447AC3E381 # ian.mikhailov+gpg@heathmont.net
+    name =
+    email =
+    signingkey =
 # [color]
 #   branch = auto
 #   diff = auto
