@@ -1,0 +1,6 @@
+#!/usr/bin/env sh
+
+if [[ "$(head -n1 $1)" != *'['* ]]; then
+    branchPrefix=$(git rev-parse --abbrev-ref HEAD);
+    echo "[${branchPrefix##*/}] $(cat $1)" > $1;
+fi

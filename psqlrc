@@ -1,0 +1,25 @@
+\x auto
+\timing on
+
+SET work_mem='512MB';
+SET maintenance_work_mem='1GB';
+
+-- Nicer PSQL prompt
+-- Prompt1 / Prompt2
+-- %M : server
+-- %m : host name
+-- %> : port
+-- %n : user
+-- %/ : current database
+\set PROMPT1 '%M:%[%033[1;31m%]%>%[%033[0m%] %n@%/%R%#%x '
+\set PROMPT2 '%M %n@%/%R %# '
+
+\set HISTFILE ~/.psql_history- :DBNAME
+\set HISTCONTROL ignoredups
+
+\set QUIET OFF
+\set VERBOSITY verbose
+
+\set version 'select version();';
+
+\set work_mem '512Mb';

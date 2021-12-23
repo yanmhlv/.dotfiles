@@ -1,0 +1,5 @@
+# tokens
+export GITHUB_TOKEN=""
+export NPM_TOKEN=""
+export HOMEBREW_GITHUB_API_TOKEN=""
+export HEX_API_KEY=""
