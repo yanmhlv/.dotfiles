@@ -55,19 +55,22 @@ export PSQL_EDITOR="code --wait"
 export VISUAL="code --wait"
 export EDITOR=$VISUAL
 
-# Completion for kitty
-kitty + complete setup zsh | source /dev/stdin
 
 # use bat instead of cat; with light theme; https://github.com/sharkdp/bat
 # alias cat="bat --theme=base16"
 alias ls="exa --color-scale"
 alias ll="exa --long --color-scale --grid"
+
 # fd; https://github.com/sharkdp/fd
 # alias find=fd
+
 # ripgrep; https://github.com/BurntSushi/ripgrep
 # alias grep=rg
+
 alias gti=git # just for typo :D
 alias icat="kitty +kitten icat"
 alias d="kitty +kitten diff"
 alias ssh="kitty +kitten ssh"
-alias k="kubectl"
+
+# Completion for kitty
+kitty + complete setup zsh | source /dev/stdin

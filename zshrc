@@ -4,7 +4,9 @@ ZSH_THEME="robbyrussell"
 plugins=(
     gh
     git
-  # git-auto-fetch
+    kubectl
+    kubectx
+    git-auto-fetch
   # zsh-syntax-highlighting
 )
 
