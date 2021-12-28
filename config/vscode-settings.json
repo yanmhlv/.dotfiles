@@ -1,0 +1,257 @@
+{
+    "breadcrumbs.enabled": false,
+    "search.exclude": {
+        "**/deps": true,
+        "**/_build": true,
+        "**/release": true,
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/node_modules": true
+    },
+    "files.defaultLanguage": "plaintext",
+    "files.trimTrailingWhitespace": true,
+    "files.associations": {
+        "*.html.eex": "html-eex",
+        "*.html.leex": "html-eex",
+        "*.eex": "html-eex",
+        "*.html.slim": "slime",
+        "*.html.slime": "slime"
+    },
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "files.eol": "\n",
+    "files.exclude": {
+        "**/log": true,
+        "**/deps": true,
+        "**/_build": true,
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "*.log": true,
+        "*.pyc": true,
+        "*.pyo": true
+    },
+
+    "editor.links": false,
+    "editor.guides.indentation": true,
+    "editor.guides.highlightActiveIndentation": true,
+    "editor.quickSuggestionsDelay": 5000,
+    "editor.colorDecorators": true,
+    "editor.suggestSelection": "recentlyUsed",
+    "editor.suggest.localityBonus": true,
+    "editor.wordBasedSuggestions": true,
+    "editor.parameterHints.enabled": true,
+    "editor.largeFileOptimizations": true,
+
+    "editor.suggest.preview": true,
+    "editor.suggest.showDeprecated": false,
+
+    "editor.detectIndentation": false,
+    "editor.overviewRulerBorder": true,
+
+    "editor.renderLineHighlight": "all",
+
+    "editor.bracketPairColorization.enabled": true,
+    "editor.guides.highlightActiveBracketPair": true,
+    "editor.guides.bracketPairsHorizontal": true,
+    "editor.guides.bracketPairs": true,
+
+    "editor.fontSize": 13,
+    "editor.fontFamily": "IBM Plex Mono, JetBrains Mono, SF Mono, Cascadia Code, Lilex, Inconsolata, Victor Mono, Hasklig, Operator Mono, Menlo, monospace",
+    "editor.fontLigatures": false,
+    "editor.cursorStyle": "line",
+    "editor.cursorBlinking": "solid",
+    "editor.cursorSmoothCaretAnimation": false,
+    "editor.minimap.side": "right",
+    "editor.tabSize": 4,
+    "editor.tabCompletion": "on",
+    "editor.showFoldingControls": "always",
+    "editor.matchBrackets": "always",
+    "editor.codeLens": true,
+    "editor.columnSelection": false,
+    "editor.renderControlCharacters": true,
+    "editor.renderWhitespace": "trailing",
+    "editor.insertSpaces": true,
+    "editor.formatOnSave": true,
+    "editor.formatOnSaveMode": "modifications",
+    "editor.semanticHighlighting.enabled": true,
+    "editor.minimap.enabled": false,
+    "editor.letterSpacing": 0,
+    "editor.copyWithSyntaxHighlighting": true,
+    "editor.rulers": [
+        {
+            "column": 80,
+            "color": "#ff333310"
+        },
+        {
+            "column": 100,
+            "color": "#ff333340"
+        },
+        {
+            "column": 120,
+            "color": "#ff333380"
+        },
+        {
+            "column": 150,
+            "color": "#ff3333a0"
+        },
+        {
+            "column": 200,
+            "color": "#ff3333ff"
+        }
+    ],
+
+    "emmet.includeLanguages": {
+        "HTML (Eex)": "html-eex",
+        "html-eex": "html-eex",
+        "html-slime": "html-slime",
+        "slime": "html-slime"
+    },
+
+    "extensions.ignoreRecommendations": false,
+    "extensions.autoUpdate": true,
+
+    "explorer.decorations.badges": true,
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmDelete": false,
+    "explorer.openEditors.visible": 0,
+
+    "diffEditor.ignoreTrimWhitespace": true,
+
+    "go.enableCodeLens": {
+        "references": false,
+        "runtest": true
+    },
+    "go.formatTool": "gofmt",
+    "go.formatFlags": [
+        "-s"
+    ],
+    "go.buildOnSave": "off",
+    "go.inferGopath": true,
+    "go.lintTool": "golangci-lint",
+    "go.lintFlags": [],
+    "go.vetFlags": [
+        "-all, -shadow"
+    ],
+    "go.gotoSymbol.includeImports": true,
+    "go.gotoSymbol.includeGoroot": true,
+    "go.useLanguageServer": true,
+    "go.gotoSymbol.ignoreFolders": [
+        ".git",
+        ".hg"
+    ],
+    "go.toolsManagement.autoUpdate": true,
+
+    "window.titleBarStyle": "custom",
+    "window.title": "${rootName} ${activeEditorMedium}",
+
+    // Run ElixirLS's rapid Dialyzer when code is saved
+    "elixirLS.dialyzerEnabled": false,
+    // Automatically fetch project dependencies when compiling
+    "elixirLS.fetchDeps": false,
+    // Formatter to use for Dialyzer warnings
+    "elixirLS.dialyzerFormat": "dialyzer",
+    // Dialyzer options to enable or disable warnings. See Dialyzer's documentation for options. Note that the "race_conditions" option is unsupported
+    "elixirLS.dialyzerWarnOpts": [],
+    // Mix environment to use for compilation
+    "elixirLS.mixEnv": "dev",
+    // Suggest @spec annotations inline using Dialyzer's inferred success typings (Requires Dialyzer)
+    "elixirLS.suggestSpecs": true,
+
+    "terminal.integrated.defaultProfile.osx": "zsh",
+    "terminal.integrated.tabs.enabled": true,
+    "terminal.integrated.fontSize": 12,
+    "terminal.integrated.fontFamily": "SF Mono Powerline, Lilex, Cascadia Mono, monospace",
+    // "terminal.integrated.cursorStyle": "line",
+    // "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.drawBoldTextInBrightColors": true,
+    "terminal.integrated.minimumContrastRatio": 1,
+
+    "telemetry.telemetryLevel": "all",
+
+    "git.autofetch": true,
+    "git.ignoreMissingGitWarning": true,
+    "git.confirmSync": false,
+
+    "gitlens.advanced.messages": {},
+
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook",
+        "*.go": "golang.go",
+        "*.py": "python",
+    },
+    "workbench.activityBar.visible": false,
+    "workbench.editor.tabCloseButton": "off",
+    "workbench.panel.defaultLocation": "bottom",
+    "workbench.startupEditor": "none",
+    "workbench.statusBar.visible": false,
+    "workbench.editor.labelFormat": "short",
+    "workbench.editor.highlightModifiedTabs": false,
+    "workbench.editor.tabSizing": "fit",
+    "workbench.fontAliasing": "default",
+    "workbench.sideBar.location": "right",
+    "workbench.enableExperiments": false,
+    "workbench.editor.closeEmptyGroups": false,
+    "workbench.editor.showTabs": true,
+    "workbench.editor.enablePreviewFromQuickOpen": true,
+    "workbench.editor.enablePreview": false,
+    "workbench.editor.decorations.badges": true,
+    "workbench.editor.untitled.hint": "hidden",
+    "workbench.settings.editor": "json",
+
+    "security.workspace.trust.untrustedFiles": "open",
+
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
+    },
+
+    "redhat.telemetry.enabled": false,
+
+    // customization
+    "[go]": {
+        "editor.tabSize": 4,
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "golang.go",
+        // "editor.suggest.showMethods": false,
+        "editor.quickSuggestions": {
+            "other": true,
+            "comments": false,
+            "strings": false
+        }
+    },
+    "[elixir]": {
+        "editor.formatOnSave": true,
+        "editor.tabSize": 2,
+        "editor.defaultFormatter": "JakeBecker.elixir-ls",
+    },
+    "[html]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "vscode.html-language-features",
+        "editor.foldingStrategy": "indentation"
+    },
+    "[yaml]": {
+        "editor.defaultFormatter": "redhat.vscode-yaml",
+    },
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features",
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features",
+    },
+    "[markdown]": {
+        "editor.wordWrap": "wordWrapColumn"
+    },
+    "[makefile]": {
+        "editor.insertSpaces": false
+    },
+    "[plaintext]": {
+        "editor.wordWrap": "wordWrapColumn"
+    },
+    "workbench.colorTheme": "Default Light+",
+    "gitlens.mode.active": "zen",
+}
