@@ -6,7 +6,6 @@ plugins=(
     gh
     git
     kubectl
-    kubectx
     git-auto-fetch
   # zsh-syntax-highlighting
 )
