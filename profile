@@ -31,10 +31,16 @@ TREE_IGNORE="cache|log|logs|node_modules|vendor"
 # https://github.com/starship/starship
 eval "$(starship init zsh)"
 
-# https://github.com/gsamokovarov/jump
-eval "$(jump shell zsh)" # j phara<tab
+# kubectl
+source <(kubectl completion zsh)
+compdef __start_kubectl k
+# helm
+eval "$(helm completion zsh)" #
 
-eval "$(gh completion -s zsh)" #
+# https://github.com/gsamokovarov/jump
+eval "$(jump shell zsh)" # j Docum<tab>
+
+eval "$(gh completion -s zsh)" # github cli completion
 
 # export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 export STARSHIP_CONFIG=~/.config/starship.toml
