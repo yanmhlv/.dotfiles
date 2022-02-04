@@ -58,6 +58,7 @@
 [url "git@github.com:"]
     insteadOf = https://github.com/
 [core]
+    filemode = false
     editor = code --wait
     quotepath = false
     precomposeunicode = true
@@ -105,6 +106,13 @@
 [merge]
     # Include summaries of merged commits in newly created merge commit messages
     log = true
+    conflictstyle = diff3
 [init]
     defaultBranch = main
     templatedir = ~/.git-templates
+
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    navigate = true  # use n and N to move between diff sections
