@@ -25,6 +25,13 @@ export PATH="/opt/homebrew/opt/sqlite/bin:$PATH"
 export GOPATH="$HOME/go"
 export PATH="$GOPATH/bin:$PATH"
 
+# Setting fd as the default source for fzf
+# export FZF_DEFAULT_COMMAND='fd'
+export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
+export FZF_COMPLETION_OPTS='--border --info=inline'
+# To apply the command to CTRL-T as well
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+
 # better version of ls; https://github.com/ogham/exa
 TREE_IGNORE="cache|log|logs|node_modules|vendor"
 
@@ -59,7 +66,8 @@ export EDITOR=$VISUAL
 # use bat instead of cat; with light theme; https://github.com/sharkdp/bat
 # alias cat="bat --theme=base16"
 alias ls="exa --color-scale"
-alias ll="exa --long --color-scale --grid"
+alias l="exa --color-scale --long --grid"
+alias ll="exa --long --color-scale"
 
 # fd; https://github.com/sharkdp/fd
 # alias find=fd
