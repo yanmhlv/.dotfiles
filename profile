@@ -65,7 +65,6 @@ export EDITOR=$VISUAL
 
 # use bat instead of cat; with light theme; https://github.com/sharkdp/bat
 # alias cat="bat --theme=base16"
-alias ls="exa --color-scale"
 alias l="exa --color-scale --long --grid"
 alias ll="exa --long --color-scale"
 
