@@ -36,6 +36,7 @@
 [gc]
     auto = 256
 [alias]
+	it = !git init && git commit --allow-empty -m \"initial commit [empty]\"
     s = status
     st = status
     ci = commit
@@ -58,6 +59,7 @@
 [url "git@github.com:"]
     insteadOf = https://github.com/
 [core]
+    pager = delta
     filemode = false
     editor = code --wait
     quotepath = false
@@ -70,6 +72,7 @@
     # https://git-scm.com/docs/git-update-index#_untracked_cache
     untrackedCache = true
 [diff]
+    colorMoved = default
     tool = default-difftool
     algorithm = minimal
     wordregex = [[:alnum:]]+|[^[:space:]]
@@ -111,8 +114,25 @@
     defaultBranch = main
     templatedir = ~/.git-templates
 
-[interactive]
-    diffFilter = delta --color-only
-
 [delta]
     navigate = true  # use n and N to move between diff sections
+    line-numbers = true
+    side-by-side = true
+    features = decorations
+    # line-numbers-left-format = ""
+    # line-numbers-right-format = "│ "
+
+[interactive]
+    diffFilter = delta --color-only --features=interactive
+
+[delta "interactive"]
+    keep-plus-minus-markers = false
+
+[delta "decorations"]
+    commit-decoration-style = blue ol
+    commit-style = raw
+    file-style = omit
+    hunk-header-decoration-style = blue box
+    hunk-header-file-style = red
+    hunk-header-line-number-style = "#067a00"
+    hunk-header-style = file line-number syntax
