@@ -1,5 +1,6 @@
 {
     "breadcrumbs.enabled": false,
+
     "search.exclude": {
         "**/deps": true,
         "**/_build": true,
@@ -8,8 +9,10 @@
         "**/.svn": true,
         "**/.hg": true,
         "**/CVS": true,
-        "**/node_modules": true
+        "**/node_modules": true,
+        "**/.venv": true
     },
+
     "files.defaultLanguage": "plaintext",
     "files.trimTrailingWhitespace": true,
     "files.associations": {
@@ -40,26 +43,21 @@
     "editor.guides.indentation": true,
     "editor.guides.highlightActiveIndentation": true,
     "editor.quickSuggestionsDelay": 5000,
-    "editor.colorDecorators": true,
     // "editor.suggestSelection": "recentlyUsed",
     "editor.suggest.localityBonus": true,
+    "editor.colorDecorators": true,
     "editor.wordBasedSuggestions": true,
     "editor.parameterHints.enabled": true,
     "editor.largeFileOptimizations": true,
-
     "editor.suggest.preview": true,
     "editor.suggest.showDeprecated": false,
-
     "editor.detectIndentation": false,
     "editor.overviewRulerBorder": true,
-
-    "editor.renderLineHighlight": "all",
-
-    "editor.bracketPairColorization.enabled": true,
+    "editor.renderLineHighlight": "line",
+    // "editor.bracketPairColorization.enabled": true,
     "editor.guides.highlightActiveBracketPair": true,
     "editor.guides.bracketPairsHorizontal": true,
     "editor.guides.bracketPairs": true,
-
     "editor.fontSize": 13,
     "editor.fontFamily": "IBM Plex Mono, JetBrains Mono, SF Mono, Cascadia Code, Lilex, Inconsolata, Victor Mono, Hasklig, Operator Mono, Menlo, monospace",
     "editor.fontLigatures": false,
@@ -76,8 +74,8 @@
     "editor.renderControlCharacters": true,
     "editor.renderWhitespace": "selection",
     "editor.insertSpaces": true,
-    "editor.formatOnSave": true,
-    "editor.formatOnSaveMode": "modifications",
+    "editor.formatOnSave": false,
+    "editor.formatOnSaveMode": "modificationsIfAvailable",
     "editor.semanticHighlighting.enabled": true,
     "editor.minimap.enabled": false,
     "editor.letterSpacing": 0,
@@ -122,6 +120,74 @@
 
     "diffEditor.ignoreTrimWhitespace": true,
 
+
+    "window.titleBarStyle": "custom",
+    "window.title": "${rootName} ${activeEditorMedium}",
+
+    "terminal.integrated.defaultProfile.osx": "zsh",
+    "terminal.integrated.tabs.enabled": true,
+    "terminal.integrated.fontSize": 12,
+    "terminal.integrated.fontFamily": "SF Mono Powerline, Lilex, Cascadia Mono, monospace",
+    // "terminal.integrated.cursorStyle": "line",
+    // "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.drawBoldTextInBrightColors": true,
+    "terminal.integrated.minimumContrastRatio": 1,
+    "telemetry.telemetryLevel": "all",
+
+    "git.autofetch": true,
+    "git.ignoreMissingGitWarning": true,
+    "git.confirmSync": false,
+
+    "gitlens.advanced.messages": {},
+    "gitlens.mode.active": "zen",
+
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook",
+        "*.go": "golang.go",
+        "*.py": "python",
+    },
+    "workbench.activityBar.visible": false,
+    "workbench.editor.tabCloseButton": "off",
+    "workbench.startupEditor": "none",
+    "workbench.editor.labelFormat": "short",
+    "workbench.editor.highlightModifiedTabs": false,
+    "workbench.editor.tabSizing": "fit",
+    "workbench.fontAliasing": "default",
+    "workbench.sideBar.location": "right",
+    "workbench.enableExperiments": false,
+    "workbench.editor.closeEmptyGroups": false,
+    "workbench.editor.showTabs": true,
+    "workbench.editor.enablePreviewFromQuickOpen": true,
+    "workbench.editor.enablePreview": false,
+    "workbench.editor.decorations.badges": true,
+    "workbench.editor.untitled.hint": "hidden",
+    "workbench.settings.editor": "json",
+    "workbench.colorTheme": "GitHub Light High Contrast (Beta)",
+    "workbench.iconTheme": "vscode-icons",
+
+    "security.workspace.trust.untrustedFiles": "open",
+
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
+    },
+
+    "redhat.telemetry.enabled": false,
+
+    // Run ElixirLS's rapid Dialyzer when code is saved
+    "elixirLS.dialyzerEnabled": false,
+    // Automatically fetch project dependencies when compiling
+    "elixirLS.fetchDeps": false,
+    // Formatter to use for Dialyzer warnings
+    "elixirLS.dialyzerFormat": "dialyzer",
+    // Dialyzer options to enable or disable warnings. See Dialyzer's documentation for options. Note that the "race_conditions" option is unsupported
+    "elixirLS.dialyzerWarnOpts": [],
+    // Mix environment to use for compilation
+    "elixirLS.mixEnv": "dev",
+    // Suggest @spec annotations inline using Dialyzer's inferred success typings (Requires Dialyzer)
+    "elixirLS.suggestSpecs": true,
+
+    // customization
     "go.enableCodeLens": {
         "references": false,
         "runtest": true
@@ -146,72 +212,6 @@
     ],
     "go.toolsManagement.autoUpdate": true,
 
-    "window.titleBarStyle": "custom",
-    "window.title": "${rootName} ${activeEditorMedium}",
-
-    // Run ElixirLS's rapid Dialyzer when code is saved
-    "elixirLS.dialyzerEnabled": false,
-    // Automatically fetch project dependencies when compiling
-    "elixirLS.fetchDeps": false,
-    // Formatter to use for Dialyzer warnings
-    "elixirLS.dialyzerFormat": "dialyzer",
-    // Dialyzer options to enable or disable warnings. See Dialyzer's documentation for options. Note that the "race_conditions" option is unsupported
-    "elixirLS.dialyzerWarnOpts": [],
-    // Mix environment to use for compilation
-    "elixirLS.mixEnv": "dev",
-    // Suggest @spec annotations inline using Dialyzer's inferred success typings (Requires Dialyzer)
-    "elixirLS.suggestSpecs": true,
-
-    "terminal.integrated.defaultProfile.osx": "zsh",
-    "terminal.integrated.tabs.enabled": true,
-    "terminal.integrated.fontSize": 12,
-    "terminal.integrated.fontFamily": "SF Mono Powerline, Lilex, Cascadia Mono, monospace",
-    // "terminal.integrated.cursorStyle": "line",
-    // "terminal.integrated.cursorBlinking": true,
-    "terminal.integrated.drawBoldTextInBrightColors": true,
-    "terminal.integrated.minimumContrastRatio": 1,
-
-    "telemetry.telemetryLevel": "all",
-
-    "git.autofetch": true,
-    "git.ignoreMissingGitWarning": true,
-    "git.confirmSync": false,
-
-    "gitlens.advanced.messages": {},
-
-    "workbench.editorAssociations": {
-        "*.ipynb": "jupyter-notebook",
-        "*.go": "golang.go",
-        "*.py": "python",
-    },
-    "workbench.activityBar.visible": false,
-    "workbench.editor.tabCloseButton": "off",
-    "workbench.panel.defaultLocation": "bottom",
-    "workbench.startupEditor": "none",
-    "workbench.editor.labelFormat": "short",
-    "workbench.editor.highlightModifiedTabs": false,
-    "workbench.editor.tabSizing": "fit",
-    "workbench.fontAliasing": "default",
-    "workbench.sideBar.location": "right",
-    "workbench.enableExperiments": false,
-    "workbench.editor.closeEmptyGroups": false,
-    "workbench.editor.showTabs": true,
-    "workbench.editor.enablePreviewFromQuickOpen": true,
-    "workbench.editor.enablePreview": false,
-    "workbench.editor.decorations.badges": true,
-    "workbench.editor.untitled.hint": "hidden",
-    "workbench.settings.editor": "json",
-
-    "security.workspace.trust.untrustedFiles": "open",
-
-    "notebook.cellToolbarLocation": {
-        "default": "right",
-        "jupyter-notebook": "left"
-    },
-
-    "redhat.telemetry.enabled": false,
-
-    // customization
     "[go]": {
         "editor.tabSize": 4,
         "editor.formatOnSave": true,
@@ -251,7 +251,6 @@
     "[plaintext]": {
         "editor.wordWrap": "wordWrapColumn"
     },
-    "workbench.colorTheme": "GitHub Light Colorblind (Beta)",
-    "gitlens.mode.active": "zen",
 }
+
 
