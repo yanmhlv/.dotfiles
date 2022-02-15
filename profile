@@ -36,13 +36,17 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 TREE_IGNORE="cache|log|logs|node_modules|vendor"
 
 # https://github.com/starship/starship
-eval "$(starship init zsh)"
+eval $(starship init zsh)
+eval $(starship completions zsh)
 
 # kubectl
 source <(kubectl completion zsh)
 compdef __start_kubectl k
+
 # helm
 eval "$(helm completion zsh)" #
+alias h=helm
+compdef _helm h
 
 # https://github.com/gsamokovarov/jump
 eval "$(jump shell zsh)" # j Docum<tab>
