@@ -162,7 +162,7 @@
     "workbench.editor.decorations.badges": true,
     "workbench.editor.untitled.hint": "hidden",
     "workbench.settings.editor": "json",
-    "workbench.colorTheme": "GitHub Light High Contrast (Beta)",
+    "workbench.colorTheme": "GitHub Light Default",
     "workbench.iconTheme": "vscode-icons",
 
     "security.workspace.trust.untrustedFiles": "open",
@@ -251,6 +251,5 @@
     "[plaintext]": {
         "editor.wordWrap": "wordWrapColumn"
     },
+    "vsicons.dontShowNewVersionMessage": true,
 }
-
-
