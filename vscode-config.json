@@ -59,7 +59,7 @@
     "editor.guides.bracketPairsHorizontal": true,
     "editor.guides.bracketPairs": true,
     "editor.fontSize": 13,
-    "editor.fontFamily": "IBM Plex Mono, JetBrains Mono, SF Mono, Cascadia Code, Lilex, Inconsolata, Victor Mono, Hasklig, Operator Mono, Menlo, monospace",
+    "editor.fontFamily": "Cousine, IBM Plex Mono, JetBrains Mono, SF Mono, Cascadia Code, Lilex, Inconsolata, Victor Mono, Hasklig, Operator Mono, Menlo, monospace",
     "editor.fontLigatures": false,
     "editor.cursorStyle": "line",
     "editor.cursorBlinking": "solid",
