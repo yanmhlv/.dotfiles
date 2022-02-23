@@ -36,7 +36,7 @@
 [gc]
     auto = 256
 [alias]
-	it = !git init && git commit --allow-empty -m \"initial commit [empty]\"
+	it = !"git init && git commit --allow-empty -m \"initial commit [empty]\""
     s = status
     st = status
     ci = commit
@@ -47,7 +47,7 @@
     d = diff --ignore-blank-lines --ignore-all-space
     df = diff --ws-error-highlight=all
     ds = diff --staged --ignore-blank-lines --ignore-all-space
-    f = fetch --all
+    f = fetch --all --prune --prune-tags
     l = log --pretty=oneline -n 20 --graph --abbrev-commit
     ls = log --stat -M -C --ignore-space-change --color-words
     lg1 = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
@@ -59,7 +59,7 @@
 [url "git@github.com:"]
     insteadOf = https://github.com/
 [core]
-    pager = delta
+    # pager = delta
     filemode = false
     editor = code --wait
     quotepath = false
@@ -86,7 +86,7 @@
     cmd = code --wait --diff $LOCAL $REMOTE
 [commit]
     # https://help.github.com/articles/signing-commits-using-gpg/
-    gpgsign = true
+    # gpgsign = true
 	template = ~/.gitcommitmsg.txt
 [gpg]
     program = gpg
