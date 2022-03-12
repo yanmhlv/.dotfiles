@@ -59,7 +59,7 @@
     "editor.guides.bracketPairsHorizontal": true,
     "editor.guides.bracketPairs": true,
     "editor.fontSize": 13,
-    "editor.fontFamily": "Cousine, IBM Plex Mono, JetBrains Mono, SF Mono, Cascadia Code, Lilex, Inconsolata, Victor Mono, Hasklig, Operator Mono, Menlo, monospace",
+    "editor.fontFamily": "SF Mono, IBM Plex Mono, JetBrains Mono, SF Mono, Cascadia Code, Lilex, Inconsolata, Victor Mono, Hasklig, Operator Mono, Menlo, monospace",
     "editor.fontLigatures": false,
     "editor.cursorStyle": "line",
     "editor.cursorBlinking": "solid",
@@ -162,7 +162,6 @@
     "workbench.editor.decorations.badges": true,
     "workbench.editor.untitled.hint": "hidden",
     "workbench.settings.editor": "json",
-    "workbench.colorTheme": "GitHub Light Default",
     "workbench.iconTheme": "vscode-icons",
 
     "security.workspace.trust.untrustedFiles": "open",
@@ -252,4 +251,5 @@
         "editor.wordWrap": "wordWrapColumn"
     },
     "vsicons.dontShowNewVersionMessage": true,
+    "workbench.colorTheme": "GitHub Light Default",
 }
