@@ -1,6 +1,5 @@
 export LC_ALL=en_US.UTF-8
 
-export BAT_CONFIG_PATH="$HOME/.config/bat.conf"
 
 # If you come from bash you might have to change your $PATH.
 export PATH="$HOME/bin:/usr/local/bin:$PATH"
@@ -32,7 +31,6 @@ export FZF_COMPLETION_OPTS='--border --info=inline'
 # To apply the command to CTRL-T as well
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
-# better version of ls; https://github.com/ogham/exa
 TREE_IGNORE="cache|log|logs|node_modules|vendor"
 
 # https://github.com/starship/starship
@@ -51,7 +49,8 @@ compdef _helm h
 # https://github.com/gsamokovarov/jump
 eval "$(jump shell zsh)" # j Docum<tab>
 
-eval "$(gh completion -s zsh)" # github cli completion
+# github cli completion
+eval "$(gh completion -s zsh)"
 
 # export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 export STARSHIP_CONFIG=~/.config/starship.toml
@@ -68,9 +67,12 @@ export VISUAL="code --wait"
 export EDITOR=$VISUAL
 
 # use bat instead of cat; with light theme; https://github.com/sharkdp/bat
+export BAT_CONFIG_PATH="$HOME/.config/bat.conf"
 # alias cat="bat --theme=base16"
-alias l="exa --color-scale --long --grid"
-alias ll="exa --long --color-scale"
+
+# better version of ls; https://github.com/ogham/exa
+alias l="exa --color-scale --long --grid --octal-permissions"
+alias ll="exa --long --color-scale --octal-permissions"
 
 # fd; https://github.com/sharkdp/fd
 # alias find=fd
