@@ -215,12 +215,6 @@
         "editor.tabSize": 4,
         "editor.formatOnSave": true,
         "editor.defaultFormatter": "golang.go",
-        // "editor.suggest.showMethods": false,
-        "editor.quickSuggestions": {
-            "other": true,
-            "comments": false,
-            "strings": false
-        }
     },
     "[elixir]": {
         "editor.formatOnSave": true,
@@ -252,4 +246,15 @@
     },
     "vsicons.dontShowNewVersionMessage": true,
     "workbench.colorTheme": "GitHub Light Default",
+    "editor.inlineSuggest.enabled": true,
+
+    // "github.copilot.advanced": {},
+    // "github.copilot-labs.advanced": {},
+    // "github.copilot.enable": {
+    //     "*": true,
+    //     "yaml": false,
+    //     "plaintext": false,
+    //     "markdown": false
+    // },
+    "github.copilot.inlineSuggest.enable": true,
 }
