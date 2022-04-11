@@ -59,7 +59,7 @@
     "editor.guides.bracketPairsHorizontal": true,
     "editor.guides.bracketPairs": true,
     "editor.fontSize": 13,
-    "editor.fontFamily": "SF Mono, IBM Plex Mono, JetBrains Mono, SF Mono, Cascadia Code, Lilex, Inconsolata, Victor Mono, Hasklig, Operator Mono, Menlo, monospace",
+    "editor.fontFamily": "IBM Plex Mono, JetBrains Mono, SF Mono, Cascadia Code, Lilex, Inconsolata, Victor Mono, Hasklig, Operator Mono, Menlo, monospace",
     "editor.fontLigatures": false,
     "editor.cursorStyle": "line",
     "editor.cursorBlinking": "solid",
@@ -139,21 +139,18 @@
     "git.confirmSync": false,
 
     "gitlens.advanced.messages": {},
-    "gitlens.mode.active": "zen",
 
     "workbench.editorAssociations": {
         "*.ipynb": "jupyter-notebook",
         "*.go": "golang.go",
         "*.py": "python",
     },
-    "workbench.activityBar.visible": false,
     "workbench.editor.tabCloseButton": "off",
     "workbench.startupEditor": "none",
     "workbench.editor.labelFormat": "short",
     "workbench.editor.highlightModifiedTabs": false,
     "workbench.editor.tabSizing": "fit",
     "workbench.fontAliasing": "default",
-    "workbench.sideBar.location": "right",
     "workbench.enableExperiments": false,
     "workbench.editor.closeEmptyGroups": false,
     "workbench.editor.showTabs": true,
@@ -191,7 +188,7 @@
         "references": false,
         "runtest": true
     },
-    "go.formatTool": "gofmt",
+    "go.formatTool": "gofumpt",
     "go.formatFlags": [
         "-s"
     ],
@@ -257,4 +254,13 @@
     //     "markdown": false
     // },
     "github.copilot.inlineSuggest.enable": true,
+    "workbench.activityBar.visible": false,
+    "github.copilot.enable": {
+        "*": true,
+        "yaml": true,
+        "plaintext": true,
+        "markdown": false
+    },
+    "gitlens.mode.active": "zen",
+    "workbench.sideBar.location": "right",
 }
