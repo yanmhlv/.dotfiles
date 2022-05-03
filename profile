@@ -46,9 +46,6 @@ eval "$(helm completion zsh)" #
 alias h=helm
 compdef _helm h
 
-# https://github.com/gsamokovarov/jump
-eval "$(jump shell zsh)" # j Docum<tab>
-
 # github cli completion
 eval "$(gh completion -s zsh)"
 
