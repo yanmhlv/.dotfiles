@@ -49,6 +49,10 @@ compdef _helm h
 # github cli completion
 eval "$(gh completion -s zsh)"
 
+# https://github.com/junegunn/fzf
+# $(brew --prefix)/opt/fzf/install # run once
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 # export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 export STARSHIP_CONFIG=~/.config/starship.toml
 

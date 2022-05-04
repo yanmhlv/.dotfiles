@@ -13,7 +13,3 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 source $HOME/.tokens
 source $HOME/.profile
-
-# https://github.com/junegunn/fzf
-# $(brew --prefix)/opt/fzf/install # run once
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
