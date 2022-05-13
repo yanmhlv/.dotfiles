@@ -38,6 +38,7 @@ eval $(starship completions zsh)
 
 # kubectl
 source <(kubectl completion zsh)
+alias k=kubectl
 compdef __start_kubectl k
 
 # helm
@@ -82,9 +83,13 @@ export EDITOR=$VISUAL
 export BAT_CONFIG_PATH="$HOME/.config/bat.conf"
 # alias cat="bat --theme=base16"
 
+# https://github.com/ajeetdsouza/zoxide
+eval "$(zoxide init zsh)"
+
 # better version of ls; https://github.com/ogham/exa
 alias l="exa --color-scale --long --grid --octal-permissions"
 alias ll="exa --long --color-scale --octal-permissions"
+alias tree="exa --tree --classify"
 
 # fd; https://github.com/sharkdp/fd
 # alias find=fd
@@ -95,8 +100,6 @@ alias ll="exa --long --color-scale --octal-permissions"
 alias gti=git # just for typo :D
 
 alias icat="kitty +kitten icat"
-alias d="kitty +kitten diff"
-alias ssh="kitty +kitten ssh"
 
 # Completion for kitty
 kitty + complete setup zsh | source /dev/stdin
