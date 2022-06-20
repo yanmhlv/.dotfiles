@@ -22,6 +22,7 @@ export PATH="/opt/homebrew/opt/sqlite/bin:$PATH"
 # go's binaries
 export GOPATH="$HOME/go"
 export PATH="$GOPATH/bin:$PATH"
+export GOPROXY="https://athens.s.o3.ru"
 
 # Setting fd as the default source for fzf
 # export FZF_DEFAULT_COMMAND='fd'
