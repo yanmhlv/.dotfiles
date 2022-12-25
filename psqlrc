@@ -1,8 +1,8 @@
 \x auto
 \timing on
 
-SET work_mem='512MB';
-SET maintenance_work_mem='1GB';
+-- SET work_mem='512MB';
+-- SET maintenance_work_mem='1GB';
 
 -- Nicer PSQL prompt
 -- Prompt1 / Prompt2
@@ -22,4 +22,8 @@ SET maintenance_work_mem='1GB';
 
 \set version 'select version();';
 
-\set work_mem '512Mb';
+\set ON_ERROR_ROLLBACK interactive
+\set COMP_KEYWORD_CASE upper
+
+\pset pager off
+\pset null '(null)'
