@@ -15,7 +15,6 @@ $git_state\
 $git_status\
 $git_metrics\
 $kubernetes\
-$docker_context\
 $battery\
 $status\
 $time\
@@ -25,3 +24,7 @@ $cmd_duration\
 $memory_usage\
 [└─>](bold green) """
 # format = "$all"
+
+[kubernetes]
+format = 'on [⛵ $context \($namespace\)](dimmed green) '
+disabled = false
