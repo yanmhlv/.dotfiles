@@ -15,3 +15,5 @@ plugins=(
 
 source $HOME/.tokens
 source $HOME/.profile
+
+source /Users/ian.mikhailov/.docker/init-zsh.sh || true # Added by Docker Desktop

@@ -99,11 +99,6 @@ export EDITOR=$VISUAL
 export BAT_CONFIG_PATH="$HOME/.config/bat.conf"
 # alias cat="bat --theme=base16"
 
-# better version of ls; https://github.com/ogham/exa
-alias l="exa --color-scale --long --grid --octal-permissions"
-alias ll="exa --long --color-scale --octal-permissions"
-alias tree="exa --tree --classify"
-
 # fd; https://github.com/sharkdp/fd
 # alias find=fd
 
@@ -112,15 +107,20 @@ alias tree="exa --tree --classify"
 
 alias gti=git # just for typo :D
 
-alias icat="kitty +kitten icat"
+# alias icat="kitty +kitten icat"
 
 # Completion for kitty
-kitty + complete setup zsh | source /dev/stdin
-alias s="kitty +kitten ssh"
+# kitty + complete setup zsh | source /dev/stdin
+# alias s="kitty +kitten ssh"
 
+# better version of ls; https://github.com/ogham/exa
 alias ls='exa'
-alias l='exa -l --all --group-directories-first --git'
-alias ll='exa -l --all --all --group-directories-first --git'
+alias l="exa --long --color-scale --grid --octal-permissions"
+alias ll='exa --long --all --group-directories-first --git --color-scale --octal-permissions'
+alias l='exa --long --all --group-directories-first --git'
 alias lt='exa -T --git-ignore --level=2 --group-directories-first'
 alias llt='exa -lT --git-ignore --level=2 --group-directories-first'
 alias lT='exa -T --git-ignore --level=4 --group-directories-first'
+alias tree="exa --tree --classify"
+
+source /Users/ian.mikhailov/.docker/init-bash.sh || true # Added by Docker Desktop

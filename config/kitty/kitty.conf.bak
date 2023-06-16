@@ -1510,6 +1510,6 @@ map kitty_mod+l next_layout
 
 
 # BEGIN_KITTY_THEME
-# Github
+# GitHub Dark
 include current-theme.conf
 # END_KITTY_THEME

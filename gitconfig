@@ -1,7 +1,7 @@
 [user]
-    name =
-    email =
-    signingkey =
+    name = Yan Mikhaylov Andreevich
+    email = myan@ozon.ru
+    # signingkey =
 # [color]
 #   branch = auto
 #   diff = auto
@@ -73,7 +73,7 @@
     untrackedCache = true
 [diff]
     colorMoved = default
-    tool = default-difftool
+    tool = vscode
     algorithm = minimal
     wordregex = [[:alnum:]]+|[^[:space:]]
     compactionHeuristic = true
@@ -82,14 +82,16 @@
 [diff "bin"]
     # Use `hexdump` to diff binary files.
     textconv = hexdump -v -C
-[difftool "default-difftool"]
+[difftool "vscode"]
     cmd = code --wait --diff $LOCAL $REMOTE
 [commit]
     # https://help.github.com/articles/signing-commits-using-gpg/
     # gpgsign = true
 	template = ~/.gitcommitmsg.txt
+	# gpgsign = true
 [gpg]
-    program = gpg
+    # program = gpg
+	format = ssh
 [fetch]
     prune = true
 [pull]
@@ -110,9 +112,12 @@
     # Include summaries of merged commits in newly created merge commit messages
     log = true
     conflictstyle = diff3
+    tool = vscode
+[mergetool "vscode"]
+    cmd = code --wait $MERGED
 [init]
-    defaultBranch = main
-    templatedir = ~/.git-templates
+  defaultBranch = main
+	templateDir = /Users/ian.mikhailov/.git-template
 
 [delta]
     navigate = true  # use n and N to move between diff sections
@@ -136,3 +141,8 @@
     hunk-header-file-style = red
     hunk-header-line-number-style = "#067a00"
     hunk-header-style = file line-number syntax
+[url "ssh://git@github.com/"]
+	insteadOf = https://github.com/
+
+[url "ssh://git@gitlab.ozon.ru/"]
+	insteadOf = https://gitlab.ozon.ru/
