@@ -1,0 +1,9 @@
+go.sum -diff -text
+*.pb.go -diff -text
+*.pb.gw.go -diff -text
+*.pb.scratch.go -diff -text
+**/*.pb.go -diff -text
+*.swagger.json -diff -text
+**/swagger.go -diff -text
+*_mock.go -diff -text
+**/*_mock.go -diff -text

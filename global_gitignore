@@ -9,3 +9,5 @@ _build
 /bin
 
 .venv
+
+go.work

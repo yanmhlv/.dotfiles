@@ -87,7 +87,7 @@
 [commit]
     # https://help.github.com/articles/signing-commits-using-gpg/
     # gpgsign = true
-	template = ~/.gitcommitmsg.txt
+	# template = ~/.gitcommitmsg.txt
 	# gpgsign = true
 [gpg]
     # program = gpg
@@ -116,8 +116,8 @@
 [mergetool "vscode"]
     cmd = code --wait $MERGED
 [init]
-  defaultBranch = main
-	templateDir = /Users/ian.mikhailov/.git-template
+  defaultBranch = master
+  templateDir = /Users/ian.mikhailov/.git-templates
 
 [delta]
     navigate = true  # use n and N to move between diff sections
@@ -145,4 +145,4 @@
 	insteadOf = https://github.com/
 
 [url "ssh://git@gitlab.ozon.ru/"]
-	insteadOf = https://gitlab.ozon.ru/
+    insteadOf = https://gitlab.ozon.ru/

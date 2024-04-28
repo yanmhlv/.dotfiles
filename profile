@@ -31,6 +31,7 @@ export FZF_COMPLETION_OPTS='--border --info=inline'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 export FZF_COMPLETION_TRIGGER='**' # change ** to whatever you like
+# export FZF_DEFAULT_OPTS="--height=40% --layout=reverse --info=inline --preview 'cat {}' --border --margin=1 --padding=1"
 
 # Use fd (https://github.com/sharkdp/fd) instead of the default find
 # command for listing path candidates.
@@ -113,14 +114,16 @@ alias gti=git # just for typo :D
 # kitty + complete setup zsh | source /dev/stdin
 # alias s="kitty +kitten ssh"
 
-# better version of ls; https://github.com/ogham/exa
-alias ls='exa'
-alias l="exa --long --color-scale --grid --octal-permissions"
-alias ll='exa --long --all --group-directories-first --git --color-scale --octal-permissions'
-alias l='exa --long --all --group-directories-first --git'
-alias lt='exa -T --git-ignore --level=2 --group-directories-first'
-alias llt='exa -lT --git-ignore --level=2 --group-directories-first'
-alias lT='exa -T --git-ignore --level=4 --group-directories-first'
-alias tree="exa --tree --classify"
+# better version of ls; https://github.com/ogham/eza
+alias ls='eza'
+alias l="eza --long --color-scale --grid --octal-permissions"
+alias ll='eza --long --all --group-directories-first --git --color-scale --octal-permissions'
+alias l='eza --long --all --group-directories-first --git'
+alias lt='eza -T --git-ignore --level=2 --group-directories-first'
+alias llt='eza -lT --git-ignore --level=2 --group-directories-first'
+alias lT='eza -T --git-ignore --level=4 --group-directories-first'
+alias tree="eza --tree --classify"
+
+alias s="kitten ssh"
 
 source /Users/ian.mikhailov/.docker/init-bash.sh || true # Added by Docker Desktop
