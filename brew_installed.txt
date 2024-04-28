@@ -1,250 +1,286 @@
-abseil 20230125.3
-ansible 8.0.0
-aom 3.6.1
-apr 1.7.4
-apr-util 1.6.3
-aribb24 1.0.4
-autoconf 2.71
-automake 1.16.5
-awscli 2.12.0
-bash 5.2.15
-bat 0.23.0
-boost 1.82.0
-brotli 1.0.9
-c-ares 1.19.1
-ca-certificates 2023-05-30
-cairo 1.16.0_5
-ceres-solver 2.1.0_3
-cffi 1.15.1
-cjson 1.7.15
-ctop 0.7.7
-dav1d 1.2.1
-docker-credential-helper 0.7.0
-docutils 0.20.1
-double-conversion 3.3.0
-duf 0.8.1
-dust 0.8.6
-eigen 3.4.0_1
-elixir 1.14.5
-entr 5.3
-erlang 25.3.2.2
-exa 0.10.1_1
-fd 8.7.0
-ffmpeg 6.0
-flac 1.4.2
-fontconfig 2.14.2
-freetype 2.13.0_1
-frei0r 1.8.0
-fribidi 1.0.13
-fzf 0.42.0
-gcc 13.1.0
-gd 2.3.3_5
-gdbm 1.23
-gdk-pixbuf 2.42.10_1
-gettext 0.21.1
-gflags 2.2.2
-gh 2.30.0
-giflib 5.2.1
-git 2.41.0
-gl2ps 1.4.2
-glew 2.2.0_1
-glib 2.76.3
-glog 0.6.0
-gmp 6.2.1_1
-gnutls 3.8.0
-go 1.20.5
-graphite2 1.3.14
-graphviz 8.0.5
-grpc 1.55.1_1
-grpcurl 1.8.7
-gts 0.7.6_2
-harfbuzz 7.3.0
-hdf5 1.14.1
-helm 3.12.1
-hey 0.1.4
-highway 1.0.4
-htop 3.2.2
-httpie 3.2.2
-httpstat 1.3.2
-hyperfine 1.17.0
-icu4c 72.1
-imath 3.1.9
-isl 0.26
-jasper 4.0.0
-jemalloc 5.3.0
-jpeg 9e
-jpeg-turbo 2.1.5.1
-jpeg-xl 0.8.2
-jq 1.6
-jsoncpp 1.9.5
-k3sup 0.12.12
-krb5 1.21
-kubectx 0.9.4
-kubernetes-cli 1.27.3
-lame 3.100
-leptonica 1.82.0_2
-libaec 1.0.6
-libarchive 3.6.2_1
-libass 0.17.1
-libavif 0.11.1
-libb2 0.98.1
-libbluray 1.3.4
-libev 4.33
-libevent 2.1.12
-libffi 3.4.4
-libgit2 1.6.4
-libidn2 2.3.4_1
-libmpc 1.3.1
-libnghttp2 1.54.0
-libogg 1.3.5
-libpng 1.6.39
-libpthread-stubs 0.4
-librist 0.2.7_3
-librsvg 2.56.1
-libsamplerate 0.2.2
-libsndfile 1.2.0_1
-libsodium 1.0.18_1
-libsoxr 0.1.3
-libssh2 1.11.0
-libtasn1 4.19.0
-libtiff 4.5.0
-libtool 2.4.7
-libunibreak 5.1
-libunistring 1.1
-libuv 1.45.0
-libvidstab 1.1.1
-libvmaf 2.3.1
-libvorbis 1.3.7
-libvpx 1.13.0
-libx11 1.8.4
-libxau 1.0.11
-libxcb 1.15_1
-libxdmcp 1.1.4
-libxext 1.3.5
-libxrender 0.9.11
-libyaml 0.2.5
-little-cms2 2.15
-luajit 2.1.0-beta3-20230612.1
-luajit-openresty 2.1-20230410
-lz4 1.9.4
-lzo 2.10
-m4 1.4.19
-maven 3.9.2
-mbedtls 3.4.0
-metis 5.1.0
-midnight-commander 4.8.29_1
-mpdecimal 2.5.1
-mpfr 4.2.0-p9
-mpg123 1.31.3
-ncurses 6.4
-netcdf 4.9.2_1
-netpbm 10.86.38_1
-nettle 3.9.1
-nghttp2 1.54.0_1
-node 20.3.0
-numpy 1.24.3
-oauth2_proxy 7.4.0
-oniguruma 6.9.8
-openblas 0.3.23
-opencore-amr 0.1.6
-opencv 4.7.0_6
-openexr 3.1.8_1
-openjdk 20.0.1
-openjpeg 2.5.0_1
-openssl@1.1 1.1.1u
-openssl@3 3.1.1
-opus 1.4
-p11-kit 0.24.1_1
-pango 1.50.14
-pcre 8.45
-pcre2 10.42
-pixman 0.42.2
-pkg-config 0.29.2_3
-postgresql@14 14.8
-pre-commit 3.3.3
-protobuf 23.2_1
-protobuf@21 21.12
-pugixml 1.13
-pwgen 2.08
-pycparser 2.21
-pygments 2.15.1
-pyqt@5 5.15.7_2
-python@3.10 3.10.12
-python@3.11 3.11.4
-python@3.9 3.9.17
-pyyaml 6.0_1
-qt@5 5.15.9
-rav1e 0.6.6
-rcm 1.3.6
-re2 20230301
-readline 8.2.1
-ripgrep 13.0.0
-ripsecrets 0.1.5
-rubberband 3.2.1
-s-lang 2.3.3
-sd 0.7.6_1
-sdl2 2.26.5
-six 1.16.0_3
-smartmontools 7.3_1
-snappy 1.1.10
-speex 1.2.1
-sqlite 3.42.0
-srt 1.5.1
-starship 1.15.0
-subversion 1.14.2_2
-suite-sparse 7.0.1
-svt-av1 1.5.0
-syncthing 1.23.5
-tbb 2021.9.0
-tesseract 5.3.1
-theora 1.1.1
-tig 2.5.8_1
-tmux 3.3a_2
-typescript 5.1.3
-unbound 1.17.1
-unixodbc 2.3.11
-utf8cpp 3.2.3
-utf8proc 2.8.0
-vault 1.13.3
-viddy 0.3.6
-virtualenv 20.23.0
-vtk 9.2.6_3
-watch 4.0.3
-webp 1.3.0_1
-wget 1.21.4
-wireguard-go 0.0.20230223
-wireguard-tools 1.0.20210914_1
-wrk 4.2.0_1
-wxwidgets 3.2.2.1_1
-x264 r3095
-x265 3.5
-xorgproto 2022.2
-xvid 1.3.7
-xz 5.4.3
-yarn 1.22.19
-youtube-dl 2021.12.17
-yq 4.34.1
-zeromq 4.3.4
-zimg 3.0.4
-zsh-completions 0.34.0
-zstd 1.5.5
-font-cascadia-code 2111.01
-font-cascadia-mono 2111.01
-font-ibm-plex 6.3.0
-font-ibm-plex-mono latest
-font-inconsolata latest
-font-intel-one-mono 1.2.1
-font-jetbrains-mono 2.304
-font-sf-mono 18.0d1e1
-font-sf-mono-for-powerline latest
-font-sometype-mono latest
-font-source-code-pro latest
-font-space-mono latest
-jetbrains-toolbox 1.24,1.24.12080
-kitty 0.28.1
-obsidian 1.2.7
-rectangle 0.56,62
-transmission 3.00
-viscosity 1.10.2
-visual-studio-code 1.67.2
-xquartz 2.8.1
+abseil
+ansible
+ansible-lint
+aom
+apr
+apr-util
+aribb24
+assimp
+autoconf
+automake
+awscli
+bash
+bat
+black
+boost
+brotli
+c-ares
+ca-certificates
+cairo
+ceres-solver
+certifi
+cffi
+cjson
+cryptography
+ctop
+dav1d
+dbus
+difftastic
+docker-credential-helper
+docutils
+double-conversion
+duf
+dust
+eigen
+elixir
+erlang
+eza
+fd
+ffmpeg
+ffmpeg@6
+flac
+fontconfig
+freetype
+frei0r
+fribidi
+fzf
+gcc
+gd
+gdbm
+gdk-pixbuf
+gettext
+gflags
+gh
+giflib
+git
+gl2ps
+glew
+glib
+glog
+gmp
+gnutls
+go
+graphite2
+graphviz
+grpc
+grpcurl
+gts
+harfbuzz
+hdf5
+helm
+hey
+highway
+htop
+httpie
+httpstat
+hunspell
+hwloc
+hyperfine
+icu4c
+imath
+isl
+jasper
+jemalloc
+jpeg
+jpeg-turbo
+jpeg-xl
+jq
+jsoncpp
+k3d
+k3sup
+k9s
+kind
+krb5
+kubectx
+kubernetes-cli
+lame
+leptonica
+libaec
+libarchive
+libass
+libavif
+libb2
+libbluray
+libev
+libevent
+libffi
+libgit2
+libidn2
+libmicrohttpd
+libmng
+libmpc
+libnghttp2
+libogg
+libomp
+libpng
+libpthread-stubs
+librist
+librsvg
+libsamplerate
+libsndfile
+libsodium
+libsoxr
+libssh
+libssh2
+libtasn1
+libtiff
+libtool
+libunibreak
+libunistring
+libuv
+libvidstab
+libvmaf
+libvorbis
+libvpx
+libx11
+libxau
+libxcb
+libxdmcp
+libxext
+libxrender
+libyaml
+little-cms2
+luajit
+luajit-openresty
+lz4
+lzo
+m4
+maven
+mbedtls
+md4c
+metis
+midnight-commander
+mkcert
+mpdecimal
+mpfr
+mpg123
+ncurses
+netcdf
+netpbm
+nettle
+nghttp2
+node
+numpy
+oniguruma
+openblas
+opencore-amr
+opencv
+openexr
+openjdk
+openjpeg
+openssl@1.1
+openssl@3
+openvino
+opus
+p11-kit
+pango
+pcre
+pcre2
+pixman
+pkg-config
+postgresql
+postgresql@14
+pre-commit
+protobuf
+protobuf@21
+pugixml
+pwgen
+pycparser
+pygments
+pyqt
+pyqt@5
+python-certifi
+python-cryptography
+python-dateutil
+python-jinja
+python-lxml
+python-markupsafe
+python-packaging
+python-pyparsing
+python-pytz
+python-setuptools
+python@3.10
+python@3.11
+python@3.12
+python@3.9
+pyyaml
+qt
+qt@5
+rav1e
+rcm
+re2
+readline
+ripgrep
+ripsecrets
+rubberband
+s-lang
+sd
+sdl2
+six
+smartmontools
+snappy
+speex
+sqlite
+srt
+starship
+subversion
+suite-sparse
+svt-av1
+tbb
+tesseract
+theora
+tig
+tmux
+typescript
+unbound
+unixodbc
+utf8cpp
+utf8proc
+vault
+viddy
+virtualenv
+vivid
+vtk
+watch
+webp
+wget
+wireguard-go
+wireguard-tools
+wrk
+wxwidgets
+x264
+x265
+xorgproto
+xvid
+xz
+yamllint
+yarn
+youtube-dl
+yq
+zeromq
+zimg
+zsh-completions
+zstd
+arc
+font-cascadia-code
+font-cascadia-mono
+font-ibm-plex
+font-ibm-plex-mono
+font-inconsolata
+font-intel-one-mono
+font-jetbrains-mono
+font-monaspace
+font-sf-mono
+font-sf-mono-for-powerline
+font-sometype-mono
+font-source-code-pro
+font-space-mono
+jetbrains-toolbox
+kitty
+obsidian
+rectangle
+transmission
+viscosity
+visual-studio-code
+xquartz
+zed
