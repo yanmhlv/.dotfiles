@@ -11,7 +11,11 @@ export VISUAL_EDITOR=code
 source ~/.tokens
 eval "$(fzf --zsh)"
 
-FZF_DEFAULT_COMMAND='fd --type f'
+export FZF_DEFAULT_COMMAND='fd --type f'
+# export FZF_CTRL_T_OPTS="
+#   --walker-skip .git,node_modules
+#   --preview 'bat -n --color=always {}'
+#   --bind 'ctrl-/:change-preview-window(down|hidden|)'"
 
 alias l='eza --grid'
 alias la='eza --grid --all'
