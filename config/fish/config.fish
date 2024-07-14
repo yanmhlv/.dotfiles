@@ -24,7 +24,6 @@ abbr k 'kubectl'
 abbr kgp 'kubectl get pods'
 abbr h 'helm'
 
-
 set fzf_history_time_format %d-%m-%y
 set fzf_git_log_format "%H %s"
 
