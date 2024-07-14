@@ -22,7 +22,6 @@ export PATH="/opt/homebrew/opt/sqlite/bin:$PATH"
 # go's binaries
 export GOPATH="$HOME/go"
 export PATH="$GOPATH/bin:$PATH"
-export GOPROXY="https://athens.s.o3.ru"
 
 # Setting fd as the default source for fzf
 # export FZF_DEFAULT_COMMAND='fd'
@@ -30,6 +29,22 @@ export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 export FZF_COMPLETION_OPTS='--border --info=inline'
 # To apply the command to CTRL-T as well
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+
+export FZF_COMPLETION_TRIGGER='**' # change ** to whatever you like
+# export FZF_DEFAULT_OPTS="--height=40% --layout=reverse --info=inline --preview 'cat {}' --border --margin=1 --padding=1"
+
+# Use fd (https://github.com/sharkdp/fd) instead of the default find
+# command for listing path candidates.
+# - The first argument to the function ($1) is the base path to start traversal
+# - See the source code (completion.{bash,zsh}) for the details.
+_fzf_compgen_path() {
+  fd --hidden --follow --exclude ".git" . "$1"
+}
+
+# Use fd to generate the list for directory completion
+_fzf_compgen_dir() {
+  fd --type d --hidden --follow --exclude ".git" . "$1"
+}
 
 TREE_IGNORE="cache|log|logs|node_modules|vendor"
 
@@ -77,20 +92,13 @@ if type brew &>/dev/null; then
 fi
 
 export PSQL_EDITOR="code --wait"
+
 export VISUAL="code --wait"
 export EDITOR=$VISUAL
 
 # use bat instead of cat; with light theme; https://github.com/sharkdp/bat
 export BAT_CONFIG_PATH="$HOME/.config/bat.conf"
 # alias cat="bat --theme=base16"
-
-# https://github.com/ajeetdsouza/zoxide
-eval "$(zoxide init zsh)"
-
-# better version of ls; https://github.com/ogham/exa
-alias l="exa --color-scale --long --grid --octal-permissions"
-alias ll="exa --long --color-scale --octal-permissions"
-alias tree="exa --tree --classify"
 
 # fd; https://github.com/sharkdp/fd
 # alias find=fd
@@ -100,7 +108,22 @@ alias tree="exa --tree --classify"
 
 alias gti=git # just for typo :D
 
-alias icat="kitty +kitten icat"
+# alias icat="kitty +kitten icat"
 
 # Completion for kitty
-kitty + complete setup zsh | source /dev/stdin
+# kitty + complete setup zsh | source /dev/stdin
+# alias s="kitty +kitten ssh"
+
+# better version of ls; https://github.com/ogham/eza
+alias ls='eza'
+alias l="eza --long --color-scale --grid --octal-permissions"
+alias ll='eza --long --all --group-directories-first --git --color-scale --octal-permissions'
+alias l='eza --long --all --group-directories-first --git'
+alias lt='eza -T --git-ignore --level=2 --group-directories-first'
+alias llt='eza -lT --git-ignore --level=2 --group-directories-first'
+alias lT='eza -T --git-ignore --level=4 --group-directories-first'
+alias tree="eza --tree --classify"
+
+alias s="kitten ssh"
+
+source /Users/ian.mikhailov/.docker/init-bash.sh || true # Added by Docker Desktop

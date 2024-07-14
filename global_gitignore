@@ -9,3 +9,10 @@ _build
 /bin
 
 .venv
+
+go.work
+go.work.sum
+
+
+prod.psql.sh
+stg.psql.sh

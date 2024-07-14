@@ -1,63 +1,76 @@
 [user]
-    name =
-    email =
-    signingkey =
-# [color]
-#   branch = auto
-#   diff = auto
-#   interactive = auto
-#   status = auto
-#   ui = auto
-# [color "branch"]
-#   upstream = cyan
-# [color "diff"]
-#   meta = yellow
-#   meta = cyan
-#   plain = white dim
-#   old = red bold
-#   new = green bold
+    name = Yan Mikhaylov Andreevich
+    email = myan@ozon.ru
+    # signingkey =
+
 [color]
     # Use colors in Git commands that are capable of colored output when
     # outputting to the terminal. (This is the default setting in Git ≥ 1.8.4.)
+    branch = auto
+    diff = auto
+    interactive = auto
+    status = auto
     ui = auto
+
 [color "branch"]
+    # upstream = cyan
     current = yellow reverse
     local = yellow
     remote = green
+
 [color "diff"]
+    # meta = yellow
+    # meta = cyan
+    # plain = white dim
+    # old = red bold
+    # new = green bold
     meta = yellow bold
     frag = magenta bold # line info
     old = red # deletions
     new = green # additions
+
 [color "status"]
     # added = green
     # changed = yellow
     # untracked = cyan
+
 [gc]
     auto = 256
+
 [alias]
-	it = !"git init && git commit --allow-empty -m \"initial commit [empty]\""
+    it = !"git init && git commit --allow-empty -m \"initial commit [empty]\""
+
     s = status
     st = status
+
     ci = commit
     ca = commit --amend
+
     co = checkout
-    b = branch -vvv
+
+    # cb = !git branch --all | grep -v '^[*+]' | awk '{print $1}' | fzf -0 --preview 'git show --color=always {-1}' | sed 's/remotes\\/origin\\///g' | xargs -r git checkout
+    # cof = "!checkout_fzf() { git branch | fzf | xargs git checkout; }; checkout_fzf"
+    # b = branch -vvv
+    b = "!checkout_fzf() { git branch | fzf | xargs git checkout; }; checkout_fzf"
     br = branch
     d = diff --ignore-blank-lines --ignore-all-space
     df = diff --ws-error-highlight=all
     ds = diff --staged --ignore-blank-lines --ignore-all-space
     f = fetch --all --prune --prune-tags
+
     l = log --pretty=oneline -n 20 --graph --abbrev-commit
     ls = log --stat -M -C --ignore-space-change --color-words
     lg1 = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
     lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
+
     lg = log --graph --date=short --branches --pretty=format:'%C(yellow)%h%C(reset) %ad | %C(75)%s%C(reset) %C(yellow)%d%C(reset) [%an]'
+
     up = !"git fetch && git rebase --autostash FETCH_HEAD"
     p = pull --recurse-submodules
     c = clone --recursive
-[url "git@github.com:"]
-    insteadOf = https://github.com/
+    fl = "!git log --oneline | fzf --preview-window=bottom --preview 'git show --color=always {+1}'"
+    wip = !git commit --all --no-verify --message 'wip: '${1:-Temp}
+
 [core]
     # pager = delta
     filemode = false
@@ -71,48 +84,67 @@
     # Speed up commands involving untracked files such as `git status`.
     # https://git-scm.com/docs/git-update-index#_untracked_cache
     untrackedCache = true
+
 [diff]
     colorMoved = default
-    tool = default-difftool
+    tool = vscode
     algorithm = minimal
+
     wordregex = [[:alnum:]]+|[^[:space:]]
     compactionHeuristic = true
     # Detect copies as well as renames.
     renames = copies
+
 [diff "bin"]
     # Use `hexdump` to diff binary files.
     textconv = hexdump -v -C
-[difftool "default-difftool"]
+
+[difftool "vscode"]
     cmd = code --wait --diff $LOCAL $REMOTE
+
 [commit]
     # https://help.github.com/articles/signing-commits-using-gpg/
     # gpgsign = true
-	template = ~/.gitcommitmsg.txt
+	# template = ~/.gitcommitmsg.txt
+	# gpgsign = true
+
 [gpg]
-    program = gpg
+    # program = gpg
+	format = ssh
+
 [fetch]
     prune = true
+
 [pull]
     ff = only
+
 [push]
     # https://git-scm.com/docs/git-config#git-config-pushdefault
     default = current
     # default = simple
     # Make `git push` push relevant annotated tags when pushing branches out.
     followTags = true
+
 [branch]
     # Show most recently changed branches first.
     sort = -committerdate
+
 [help]
     # Automatically correct and execute mistyped commands.
     autocorrect = 0
+
 [merge]
     # Include summaries of merged commits in newly created merge commit messages
     log = true
     conflictstyle = diff3
+    tool = vscode
+
+[mergetool "vscode"]
+    cmd = code --wait $MERGED
+
 [init]
-    defaultBranch = main
-    templatedir = ~/.git-templates
+  defaultBranch = master
+  templateDir = /Users/ian.mikhailov/.git-templates
 
 [delta]
     navigate = true  # use n and N to move between diff sections
@@ -136,3 +168,12 @@
     hunk-header-file-style = red
     hunk-header-line-number-style = "#067a00"
     hunk-header-style = file line-number syntax
+
+[url "ssh://git@github.com/"]
+	insteadOf = https://github.com/
+
+[url "git@github.com:"]
+    insteadOf = https://github.com/
+
+[url "ssh://git@gitlab.ozon.ru/"]
+    insteadOf = https://gitlab.ozon.ru/
