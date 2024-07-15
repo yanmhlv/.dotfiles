@@ -15,16 +15,16 @@ fish_add_path (go env GOPATH)/bin
 export FZF_DEFAULT_COMMAND='fd'
 export GIT_EXTERNAL_DIFF="difft"
 
-abbr l 'eza --grid'
-abbr la 'eza --grid --all'
-abbr ll 'eza -al --group-directories-first'
+abbr l    'eza --grid'
+abbr la   'eza --grid --all'
+abbr ll   'eza -al --group-directories-first'
 abbr tree 'eza --tree'
 
 abbr c 'clear'
 
-abbr k 'kubectl'
+abbr k   'kubectl'
 abbr kgp 'kubectl get pods'
-abbr h 'helm'
+abbr h   'helm'
 
 function kns -d "kubens"
     kubectl get ns --no-headers -o wide | fzf --bind 'enter:become(kubectl config set-context --current --namespace={1})'
