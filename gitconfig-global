@@ -1,0 +1,154 @@
+[core]
+    filemode = false
+    editor = code --wait
+    quotepath = false
+    precomposeunicode = true
+    untrackedCache = true
+    hooksPath = ~/.git-templates/hooks
+    excludesfile = ~/.gitignore_global
+    # Use custom `.gitignore` and `.gitattributes`.
+    attributesfile = ~/.gitattributes
+    # Speed up commands involving untracked files such as `git status`.
+    # https://git-scm.com/docs/git-update-index#_untracked_cache
+    untrackedCache = true
+
+[color]
+    # Use colors in Git commands that are capable of colored output when
+    # outputting to the terminal. (This is the default setting in Git ≥ 1.8.4.)
+    # ui = auto
+    ui = auto
+
+[color "branch"]
+    # upstream = cyan
+    current = yellow reverse
+    local = yellow
+    remote = green
+
+[delta]
+	features = line-numbers decorations
+	whitespace-error-style = 22 reverse
+
+[delta "decorations"]
+	commit-decoration-style = bold yellow box ul
+	file-style = bold yellow ul
+	file-decoration-style = none
+
+[sequence]
+	editor = interactive-rebase-tool
+
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold # line info
+    old = red # deletions
+    new = green # additions
+    plain = white dim
+
+[color "status"]
+    added = green
+    changed = yellow
+    untracked = cyan
+
+[gc]
+    auto = 256
+
+[alias]
+	it = !"git init && git commit --allow-empty -m \"initial commit [empty]\""
+    s = status
+    st = status
+    ci = commit
+    ca = commit --amend
+    co = checkout
+
+    # b = branch -vvv
+    b = "!git branch --all --sort=-committerdate | fzf --preview 'git show --color=always {-1}' --bind 'enter:become(git checkout {-1})'"
+    br = branch
+
+    d = diff --ignore-blank-lines --ignore-all-space
+    df = diff --ws-error-highlight=all
+    ds = diff --staged --ignore-blank-lines --ignore-all-space
+    f = fetch --all --prune --prune-tags
+    p = pull --recurse-submodules
+    c = clone --recursive
+
+    l = log --pretty=oneline -n 20 --graph --abbrev-commit
+    # reflog =  log -g --abbrev-commit --pretty=oneline
+    ls = log --stat -M -C --ignore-space-change --color-words
+    lg = log --graph --date=short --branches --pretty=format:'%C(yellow)%h%C(reset) %ad | %C(75)%s%C(reset) %C(yellow)%d%C(reset) [%an]'
+    lg1 = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+    lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
+
+    # stl = !"git stash list| fzf --preview 'echo {} | cut -d\':\' -f1 | xargs git stash show -p --color=always'"
+
+[diff]
+    colorMoved = default
+    tool = default-difftool
+    algorithm = minimal
+
+    wordregex = [[:alnum:]]+|[^[:space:]]
+    compactionHeuristic = true
+    # Detect copies as well as renames.
+    renames = copies
+
+[diff "bin"]
+    # Use `hexdump` to diff binary files.
+    textconv = hexdump -v -C
+
+[difftool "default-difftool"]
+    cmd = code --wait --diff $LOCAL $REMOTE
+
+[commit]
+    # https://help.github.com/articles/signing-commits-using-gpg/
+    # gpgsign = true
+	template = ~/.gitcommitmsg.txt
+
+[gpg]
+	# gpgsign = true
+    # program = gpg
+
+[fetch]
+    prune = true
+
+[pull]
+    ff = only
+
+[push]
+    # https://git-scm.com/docs/git-config#git-config-pushdefault
+    default = current
+    # default = simple
+    # Make `git push` push relevant annotated tags when pushing branches out.
+    followTags = true
+
+[branch]
+    # Show most recently changed branches first.
+    sort = -committerdate
+
+[help]
+    # Automatically correct and execute mistyped commands.
+    autocorrect = 0
+
+[merge]
+    # Include summaries of merged commits in newly created merge commit messages
+    log = true
+    conflictstyle = diff3
+    tool = vscode
+
+[mergetool "vscode"]
+    cmd = code --wait --merge $REMOTE $LOCAL $BASE $MERGED
+
+[init]
+    defaultBranch = master
+	templateDir = /Users/myan/.git-templates
+
+[url "ssh://git@gitlab.ozon.ru/"]
+	insteadOf = https://gitlab.ozon.ru/
+
+[url "ssh://git@github.com/"]
+	insteadOf = https://github.com/
+
+[credential "https://github.com"]
+	helper =
+	helper = !/opt/homebrew/bin/gh auth git-credential
+
+[credential "https://gist.github.com"]
+	helper =
+	helper = !/opt/homebrew/bin/gh auth git-credential
