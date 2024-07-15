@@ -4,11 +4,11 @@ end
 
 set -g fish_greeting
 
-/opt/homebrew/bin/brew shellenv | source
-starship init fish | source
-fzf --fish | source
-kubectl completion fish | source
-helm completion fish | source
+/opt/homebrew/bin/brew shellenv fish | source
+starship init fish                   | source
+fzf --fish                           | source
+kubectl completion fish              | source
+helm completion fish                 | source
 
 fish_add_path (go env GOPATH)/bin
 

@@ -5,7 +5,7 @@
     precomposeunicode = true
     untrackedCache = true
     hooksPath = ~/.git-templates/hooks
-    excludesfile = ~/.gitignore_global
+    excludesfile = ~/.gitignore-global
     # Use custom `.gitignore` and `.gitattributes`.
     attributesfile = ~/.gitattributes
     # Speed up commands involving untracked files such as `git status`.
