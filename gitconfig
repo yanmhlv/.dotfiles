@@ -62,8 +62,9 @@
     ls = log --stat -M -C --ignore-space-change --color-words
     lg1 = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
     lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
-
     lg = log --graph --date=short --branches --pretty=format:'%C(yellow)%h%C(reset) %ad | %C(75)%s%C(reset) %C(yellow)%d%C(reset) [%an]'
+
+    rlog = "!git reflog --color=always | fzf --no-multi --ansi --no-sort --no-height --preview 'git show --color=always {1}'"
 
     up = !"git fetch && git rebase --autostash FETCH_HEAD"
     p = pull --recurse-submodules
