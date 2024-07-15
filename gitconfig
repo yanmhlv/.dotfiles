@@ -5,5 +5,6 @@
 
 [include]
     path = ~/.gitconfig-global
+
 [init]
 	defaultBranch = master
