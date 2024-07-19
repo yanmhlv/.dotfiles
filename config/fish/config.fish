@@ -24,7 +24,6 @@ abbr tree 'eza --tree'
 abbr c 'clear'
 
 abbr k   'kubectl'
-abbr kgp 'kubectl get pods'
 abbr h   'helm'
 
 function kns -d "kubens"
