@@ -13,6 +13,7 @@ helm completion fish                 | source
 fish_add_path (go env GOPATH)/bin
 
 export FZF_DEFAULT_COMMAND='fd'
+export FZF_CTRL_T_OPTS="--walker-skip .git"
 export GIT_EXTERNAL_DIFF="difft"
 
 abbr l    'eza --grid'
