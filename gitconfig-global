@@ -24,18 +24,6 @@
     local = yellow
     remote = green
 
-[delta]
-	features = line-numbers decorations
-	whitespace-error-style = 22 reverse
-
-[delta "decorations"]
-	commit-decoration-style = bold yellow box ul
-	file-style = bold yellow ul
-	file-decoration-style = none
-
-[sequence]
-	editor = interactive-rebase-tool
-
 [color "diff"]
     meta = yellow bold
     frag = magenta bold # line info
@@ -47,6 +35,18 @@
     added = green
     changed = yellow
     untracked = cyan
+
+# [delta]
+# 	features = line-numbers decorations
+# 	whitespace-error-style = 22 reverse
+
+# [delta "decorations"]
+# 	commit-decoration-style = bold yellow box ul
+# 	file-style = bold yellow ul
+# 	file-decoration-style = none
+
+# [sequence]
+# 	editor = interactive-rebase-tool
 
 [gc]
     auto = 256
@@ -60,7 +60,7 @@
     co = checkout
 
     # b = branch -vvv
-    b = "!git branch --all --sort=-committerdate | fzf --preview 'git show --color=always {-1}' --bind 'enter:become(git checkout {-1})'"
+    b = "!git branch --sort=-committerdate | fzf --preview 'git show --color=always {-1}' --bind 'enter:become(git checkout {-1})'"
     br = branch
 
     d = diff --ignore-blank-lines --ignore-all-space
@@ -137,7 +137,7 @@
 
 [init]
     defaultBranch = master
-	templateDir = /Users/myan/.git-templates
+	templateDir = ~/.git-templates
 
 [url "ssh://git@gitlab.ozon.ru/"]
 	insteadOf = https://gitlab.ozon.ru/
