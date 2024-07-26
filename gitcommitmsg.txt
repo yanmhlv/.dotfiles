@@ -1,3 +1,6 @@
+
+# If applied, my commit will...
+
 # <type>: <commit-message> --(max 50 chars)----->|
 # <commit description> --(max 72 chars)------------------------------->|
 # --- COMMIT END ---
