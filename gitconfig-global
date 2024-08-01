@@ -55,8 +55,13 @@
 	it = !"git init && git commit --allow-empty -m \"initial commit [empty]\""
     s = status
     st = status
+
     ci = commit
     ca = commit --amend
+    # fixup = "!git commit --fixup=$(git log --oneline | fzf | awk '{print $1}')"
+    # fixup = "!git log --oneline | fzf | awk '{print $1}' | xargs -o git commit --fixup"
+    fixup = "!git log --oneline -n 10 --no-merges | fzf | cut -c -7 | xargs -o git commit --fixup"
+
     co = checkout
 
     # b = branch -vvv
@@ -70,8 +75,7 @@
     p = pull --recurse-submodules
     c = clone --recursive
 
-    l = log --pretty=oneline -n 20 --graph --abbrev-commit
-    # reflog =  log -g --abbrev-commit --pretty=oneline
+    l = log --pretty=oneline -n 20 --abbrev-commit
     ls = log --stat -M -C --ignore-space-change --color-words
     lg = log --graph --date=short --branches --pretty=format:'%C(yellow)%h%C(reset) %ad | %C(75)%s%C(reset) %C(yellow)%d%C(reset) [%an]'
     lg1 = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
