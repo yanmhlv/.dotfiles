@@ -52,7 +52,7 @@
     auto = 256
 
 [alias]
-	it = !"git init && git commit --allow-empty -m \"initial commit [empty]\""
+	it = "!git init && git commit --allow-empty -m \"initial commit [empty]\""
     s = status
     st = status
 
@@ -60,7 +60,7 @@
     ca = commit --amend
     # fixup = "!git commit --fixup=$(git log --oneline | fzf | awk '{print $1}')"
     # fixup = "!git log --oneline | fzf | awk '{print $1}' | xargs -o git commit --fixup"
-    fixup = "!git log --oneline -n 10 --no-merges | fzf | cut -c -7 | xargs -o git commit --fixup"
+    fix = "!git log --oneline -n 10 --no-merges | fzf | cut -c -7 | xargs -o git commit --fixup"
 
     co = checkout
 
