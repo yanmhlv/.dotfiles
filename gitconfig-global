@@ -63,6 +63,7 @@
     fix = "!git log --oneline -n 10 --no-merges | fzf | cut -c -7 | xargs -o git commit --fixup"
 
     co = checkout
+    sw = switch
 
     # b = branch -vvv
     b = "!git branch --sort=-committerdate | fzf --preview 'git show --color=always {-1}' --bind 'enter:become(git checkout {-1})'"
