@@ -1,0 +1,4 @@
+[user]
+    name = Yan Mikhaylov Andreevich
+    email = myan@ozon.ru
+	signingkey = ~/.ssh/id_ed25519.pub
