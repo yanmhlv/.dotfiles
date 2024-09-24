@@ -43,34 +43,26 @@ bind -M insert \cr _fzf_search_history
 
 fzf_configure_bindings --directory=\ct --processes=\ck --git_log=\cg
 
-
 # ozon helpers
 function warden-dev --argument service port
   set response (curl -s "https://warden-dev.o3.ru/endpoints?service=$service:$port")
-  echo $response | jq -r -c '(sort_by(.ReleaseName).[] | {ReleaseName,IsDefaultRoute,Address,InstanceName})' | fzf --reverse --multi --bind ctrl-a:select-all
+  echo $response | jq -r -c '(sort_by(.ReleaseName).[] | {Role,ReleaseName,IsDefaultRoute,Address,InstanceName})' | fzf --reverse --multi --bind ctrl-a:select-all
 end
 
 function warden-stg --argument service port
   set response (curl -s "https://warden-stg.o3.ru/endpoints?service=$service:$port")
-  echo $response | jq -r -c '(sort_by(.ReleaseName).[] | {ReleaseName,IsDefaultRoute,Address,InstanceName})' | fzf --reverse --multi --bind ctrl-a:select-all
+  echo $response | jq -r -c '(sort_by(.ReleaseName).[] | {Role,ReleaseName,IsDefaultRoute,Address,InstanceName})' | fzf --reverse --multi --bind ctrl-a:select-all
 end
 
 function warden-prod --argument service port
   set response (curl -s "https://warden-prod.o3.ru/endpoints?service=$service:$port")
-  echo $response | jq -r -c '(sort_by(.ReleaseName).[] | {ReleaseName,IsDefaultRoute,Address,InstanceName})' | fzf --reverse --multi --bind ctrl-a:select-all
+  echo $response | jq -r -c '(sort_by(.ReleaseName).[] | {Role,ReleaseName,IsDefaultRoute,Address,InstanceName})' | fzf --reverse --multi --bind ctrl-a:select-all
 end
 
 # function get-tokens --argument addr
 #     set response (curl -s -XGET "http://$addr/s2s-auth")
 #     echo $response | jq -c '[.tokens | .iat] | min'
 # end
-
-function pod_shell
-    set pod (kubectl get pods -o name | fzf)
-    echo "connecting to $pod"
-
-    kubectl exec -q -ti $pod -- $argv
-end
 
 function pod_log
     set pod (kubectl get pods -o name | fzf)
