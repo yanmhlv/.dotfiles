@@ -75,8 +75,10 @@
 
     ci = commit
     ca = commit --amend
-    fix = "!git log --oneline -n 10 --no-merges | fzf | cut -c -7 | xargs -o git commit --fixup"
-    # fixup = "!git commit --fixup=$(git log --oneline | fzf | awk '{print $1}')"
+    fix = "!git log --oneline --no-decorate --no-merges | fzf -0 --preview 'git show --color=always --format=oneline {1}' | cut -c -7 | xargs -o git commit --fixup"
+
+    # fixup = "!git commit --fixup=$(git log --oneline | fzf -0 --preview 'git show --color=always --format=oneline {1}' | awk '{print $1}')"
+    # fixup = "!git log --oneline --no-decorate --no-merges | fzf -0 --preview 'git show --color=always --format=oneline {1}' | awk '{print $1}' | xargs -r git commit --fixup"
     # fixup = "!git log --oneline | fzf | awk '{print $1}' | xargs -o git commit --fixup"
 
     co = checkout
@@ -93,11 +95,15 @@
     p = pull --recurse-submodules
     c = clone --recursive
 
+    ls = !"git ls-files | fzf --preview='git log --pretty=oneline --stat --color=always --follow {}'"
+
     l = log --pretty=oneline -n 20 --abbrev-commit
-    ls = log --stat -M -C --ignore-space-change --color-words
-    lg = log --graph --date=short --branches --pretty=format:'%C(yellow)%h%C(reset) %ad | %C(75)%s%C(reset) %C(yellow)%d%C(reset) [%an]'
-    lg1 = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
-    lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
+    # ls = log --stat -M -C --ignore-space-change --color-words
+    lg = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+
+    # lg = log --graph --date=short --branches --pretty=format:'%C(yellow)%h%C(reset) %ad | %C(75)%s%C(reset) %C(yellow)%d%C(reset) [%an]'
+    # lg1 = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+    # lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
 
     # stl = !"git stash list| fzf --preview 'echo {} | cut -d\':\' -f1 | xargs git stash show -p --color=always'"
 
@@ -117,7 +123,6 @@
 
 [difftool "default-difftool"]
     cmd = code --wait --diff $LOCAL $REMOTE
-
 
 [fetch]
     prune = true
