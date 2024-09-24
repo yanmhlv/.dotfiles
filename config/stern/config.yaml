@@ -1,0 +1,4 @@
+# <flag name>: <value>
+tail: 10
+max-log-requests: 999
+timestamps: short
