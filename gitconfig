@@ -69,6 +69,12 @@
     auto = 256
 
 [alias]
+    addm = "!git ls-files --deleted --modified --other --exclude-standard | fzf -0 -m --preview 'git diff --color=always {-1}' | xargs -r git add"
+
+    edit = "!git ls-files --modified --other --exclude-standard | sort -u | fzf -0 --multi --preview 'git diff --color {}' | xargs -r $EDITOR -p"
+
+    resetm = "!git diff --name-only --cached | fzf -0 -m --preview 'git diff --color=always {-1}' | xargs -r git reset"
+
     it = "!git init && git commit --allow-empty -m \"initial commit [empty]\""
     s = status
     st = status
