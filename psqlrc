@@ -1,29 +1,46 @@
 \set QUIET 1
 
-\set PROMPT1 '%M:%[%033[1;31m%]%>%[%033[0m%] %n@%/%R%#%x '
-\set PROMPT2 '%M %n@%/%R %# '
-
 \pset null '[null]'
+\pset border 2
 
-
+\set HISTFILE ~/.psql_history- :DBNAME
+\set HISTCONTROL ignoredups
 \set COMP_KEYWORD_CASE upper
-
-\timing
-
-\set HISTFILE ~/.psql_history
-\set HISTSIZE 2000
-
-\x auto
+\set COMP_KEYWORD_CASE preserve-upper
 
 \set VERBOSITY verbose
 
-\set QUIET 0
+\set PROMPT1 '%M:%[%033[1;31m%]%>%[%033[0m%] %n@%/%R%#%x '
+-- SELECT CASE WHEN pg_is_in_recovery()
+--     THEN '%[%033[33;1m%]%x%[%033[0m%]%[%033[34m%]%/%[%033[0m%]%R%# '
+--     ELSE '%[%033[33;1m%]%x%[%033[0m%]%[%033[31m%]%/%[%033[0m%]%R%# '
+-- END AS prompt \gset
+-- \set PROMPT1 :prompt
+\set PROMPT2 '... > '
 
-\echo 'Welcome to PostgreSQL! \n'
-\echo 'Type :version to see the PostgreSQL version. \n'
-\echo 'Type :extensions to see the available extensions. \n'
-\echo 'Type \\q to exit. \n'
 \set version 'SELECT version();'
 \set extensions 'select * from pg_available_extensions;'
+\set role 'select case when pg_is_in_recovery() then \'replica\' else \'master\' end as server_role;'
+\set settings 'select name, setting,unit,context from pg_settings;'
+\set activity 'select pid, datname, usename, query, now()-xact_start as "xact_runtime", now() - query_start as "query_runtime", state, wait_event, wait_event_type  from pg_stat_activity where state != \'idle\' and pid != pg_backend_pid() order by xact_start;'
+\set conninfo 'select * from pg_stat_activity order by backend_start;'
+\set uptime 'select now() - pg_postmaster_start_time() AS uptime;'
 
-\set COMP_KEYWORD_CASE preserve-upper
+\echo '----------------------------------------------------------'
+\echo 'Administrative queries:'
+\echo '\tType :version to see the PostgreSQL version.'
+\echo '\tType :extensions to see the available extensions.'
+\echo '\tType :role to see Server Role'
+\echo '\tType :settings to see Server Settings'
+\echo '\tType :activity to see Server current active transactions'
+\echo '\tType :conninfo to see Server connections'
+\echo '\tType :uptime to see Server uptime'
+\echo '\tType \\h to see Help with SQL commands'
+\echo '\tType \\? to see- Help with psql commands'
+\echo '\tType \\q to exit. '
+\echo '----------------------------------------------------------'
+
+\x auto
+\timing
+
+\set QUIET 0
