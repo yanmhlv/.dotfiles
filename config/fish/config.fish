@@ -27,6 +27,8 @@ abbr c 'clear'
 abbr k   'kubectl'
 abbr h   'helm'
 
+abbr s 'kitten ssh'
+
 function kns -d "kubens"
     kubectl get ns --no-headers -o wide | fzf --bind 'enter:become(kubectl config set-context --current --namespace={1})'
 end
@@ -68,3 +70,5 @@ function pod_log
     set pod (kubectl get pods -o name | fzf)
     kubectl logs -f --tail 5000 $pod | fzf --tail 5000 --tac --wrap --multi
 end
+
+abbr ftail 'fzf --tail 5000 --tac --wrap --multi'
