@@ -21,6 +21,9 @@
     format = ssh
     gpgsign = true
 
+[gpg "ssh"]
+	allowedSignersFile = ~/.config/git/allowed_signers
+
 [commit]
     # https://help.github.com/articles/signing-commits-using-gpg/
     gpgsign = true
@@ -180,6 +183,3 @@
 
 [includeIf "hasconfig:remote.*.url:git@gitlab.ozon.ru:*/**"]
     path=~/.gitconfig-ozon
-
-[gpg "ssh"]
-	allowedSignersFile = ~/.config/git/allowed_signers
