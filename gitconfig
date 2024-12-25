@@ -180,5 +180,6 @@
 
 [includeIf "hasconfig:remote.*.url:git@gitlab.ozon.ru:*/**"]
     path=~/.gitconfig-ozon
+
 [gpg "ssh"]
 	allowedSignersFile = ~/.config/git/allowed_signers
